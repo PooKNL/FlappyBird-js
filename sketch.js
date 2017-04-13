@@ -1,13 +1,17 @@
 var bird;
 var pipes = [];
+function preload() {  // preload() runs once
+  img = loadImage("assets/backgroundFixed.png");
+}
+
 function setup() {
-  createCanvas(400, 600);
+  createCanvas(1200, 800);
   bird = new Bird();
   pipes.push(new Pipe());
 }
 
 function draw() {
-  background(0);
+  background(img);
 
   for (var i = pipes.length-1; i >= 0; i--) {
     pipes[i].show();
