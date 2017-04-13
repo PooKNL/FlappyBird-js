@@ -1,3 +1,7 @@
+function preload() {  // preload() runs once
+  img = loadImage("assets/movingbird.gif");
+}
+
 function Bird() {
   this.y = height/2;
   this.x = 64;
